@@ -1,0 +1,184 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "### **Encontrar errores de Sintaxis comúnes en el HTML**"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "html",
+            "source": [
+                "<!DOCTPYE html>\r\n<html lang=\"es\">\r\n<head>\r\n    <title>Lista de Compras\r\n    <link rel=stylesheet\" href=\"styles.css>\r\n    <h1>Mi Lista de Compras</h3>\r\n    <br>\r\n    <hr/>\r\n</head>\r\n<body>\r\n    <header>\r\n        <h1>Mi Lista de Compras</h3>\r\n        <nav>\r\n            <ul>\r\n                <li><a href=\"index.html\">Inicio</a></li>\r\n                <li><a>href=\"contacto.html\">Contacto</li>\r\n                <li><a href=\"ofertas.html>Ofertas Especiales</a></li>\r\n            </ul>\r\n        </nav>\r\n    </header>\r\n    \r\n    <section>\r\n        <h2>Lista de compras</h2>\r\n        <ul>\r\n            <li>Frutas\r\n                <ol>\r\n                    <li>Manzana</li>\r\n                    <li>Banana</li>\r\n                    <li>Naranja\r\n                </ol>\r\n            </li>\r\n            <li>Verduras\r\n                <ul>\r\n                    <li>Zanahoria</li>\r\n                    <li>Lechuga\r\n                    <li>Tomate</li>\r\n            </li>\r\n            <li>Lácteos\r\n                <ul>\r\n                    <li>Leche</li>\r\n                    <li>Queso</li>\r\n                    <li>Mantequilla</li>\r\n                </ul>\r\n        </ul>\r\n    </section>\r\n    \r\n    <section>\r\n        <h2>Recomendaciones/h2>\r\n        <p>Recuerda comprar productos frescos y revisar la fecha de vencimiento. \r\n           <span class=resaltado\">Muy importante</span> mantener una dieta balanceada.</p>\r\n        <img scr=\"frutas.jpg\" alt=\"Imagen de frutas frescas\" width=400 height=300>\r\n        <img>src=\"image.jpg\">\r\n    <section>\r\n    \r\n    <footer>\r\n        <p>© 2025 Mi Supermercado. Todos los derechos reservados.</principal>\r\n        <a href=\"https://example.com target=\"_blank\">Visita nuestra tienda en línea</a>\r\n    </footer>\r\n</body>\r\n</html>"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/html",
+                            "value": [
+                                "<!DOCTPYE html>\r",
+                                "<html lang=\"es\">\r",
+                                "<head>\r",
+                                "    <title>Lista de Compras\r",
+                                "    <link rel=stylesheet\" href=\"styles.css\">\r",
+                                "    <h1>Mi Lista de Compras</h3>\r",
+                                "</head>\r",
+                                "<body>\r",
+                                "    <header>\r",
+                                "        <h1>Mi Lista de Compras</h3>\r",
+                                "        <nav>\r",
+                                "            <ul>\r",
+                                "                <li><a href=\"index.html\">Inicio</a></li>\r",
+                                "                <li><a href=\"contacto.html\">Contacto</li>\r",
+                                "                <li><a href=\"ofertas.html>Ofertas Especiales</a></li>\r",
+                                "            </ul>\r",
+                                "        </nav>\r",
+                                "    </header>\r",
+                                "    \r",
+                                "    <section>\r",
+                                "        <h2>Lista de compras</h2>\r",
+                                "        <ul>\r",
+                                "            <li>Frutas\r",
+                                "                <ol>\r",
+                                "                    <li>Manzana</li>\r",
+                                "                    <li>Banana</li>\r",
+                                "                    <li>Naranja\r",
+                                "                </ol>\r",
+                                "            </li>\r",
+                                "            <li>Verduras\r",
+                                "                <ul>\r",
+                                "                    <li>Zanahoria</li>\r",
+                                "                    <li>Lechuga</li>\r",
+                                "                    <li>Tomate</li>\r",
+                                "            </li>\r",
+                                "            <li>Lácteos\r",
+                                "                <ul>\r",
+                                "                    <li>Leche</li>\r",
+                                "                    <li>Queso</li>\r",
+                                "                    <li>Mantequilla</li>\r",
+                                "                </ul>\r",
+                                "        </ul>\r",
+                                "    </section>\r",
+                                "    \r",
+                                "    <section>\r",
+                                "        <h2>Recomendaciones/h2>\r",
+                                "        <p>Recuerda comprar productos frescos y revisar la fecha de vencimiento. \r",
+                                "           <span class=resaltado\">Muy importante</span> mantener una dieta balanceada.</p>\r",
+                                "        <img scr=\"frutas.jpg\" alt=\"Imagen de frutas frescas\" width=400 height=300>\r",
+                                "        <img>src=\"image.jpg\"/>\r",
+                                "    </section>\r",
+                                "    \r",
+                                "    <footer>\r",
+                                "        <p>© 2025 Mi Supermercado. Todos los derechos reservados.</principal>\r",
+                                "        <a href=\"https://example.com target=\"_blank\">Visita nuestra tienda en línea</a>\r",
+                                "    </footer>\r",
+                                "</body>\r",
+                                "</html>"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### Ejercicios Prácticos: Introducción a JavaScript y Tipos de Datos"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "**Descripción e Instrucciones**\r\n\r\nEste código HTML crea una página con botones estilizados en CSS, que al hacer clic ejecutan distintas funciones en la consola o mediante alert(). Cada botón está asociado con una función de JavaScript que realiza una operación específica, como calcular la edad, verificar si un número es par o impar, comprobar si una persona puede conducir, comparar dos números o determinar la estación del año."
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "---"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#### **Estructura del Código**\r\n\r\n1. **HTML:**\r\n   - Se incluye la etiqueta `<!DOCTYPE html>` para definir el documento como HTML5.\r\n   - Se define la estructura básica del documento con botones que llaman a funciones en JavaScript.\r\n\r\n2. **CSS:**\r\n   - Los botones se estilizan con la clase `.boton-accionable` para mantener un diseño coherente.\r\n   - Se agrega un efecto `hover` para mejorar la experiencia del usuario.\r\n\r\n3. **JavaScript:**\r\n   - Se implementan funciones para realizar operaciones básicas en la consola o mostrar mensajes con `alert()`.\r\n   - Cada función recibe parámetros y realiza cálculos con estructuras de control de flujo."
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "##### **Ejercicios Resuelto**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "html",
+            "source": [
+                "<!DOCTYPE html>\r\n<html lang=\"es\">\r\n\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Ejercicios de JavaScript</title>\r\n    <style>\r\n        button.boton-accionable {\r\n            /* Agregar los estilos del boton*/\r\n        }\r\n\r\n        button.boton-accionable:hover {\r\n            /* Agregar los estilos del boton cuando se le pasa el mouse por encima*/\r\n        }\r\n    </style>\r\n    <script>\r\n        function calcularEdad(anioNacimiento) {\r\n            let anioActual = new Date().getFullYear();\r\n            let edad = anioActual - anioNacimiento;\r\n            alert(`Tienes ${edad} años.`);\r\n        }\r\n\r\n        function puedeVotar(edad) {\r\n            if (edad >= 18) {\r\n                console.log(\"Puedes votar.\");\r\n            } else {\r\n                console.log(\"No puedes votar.\");\r\n            }\r\n        }\r\n\r\n        //Muestra un alert() indicando si numero es par o impar\r\n        function verificarNumeroPares(numero) {\r\nlet numero = 0;(\r\nif (numero = 0,2,4,6,8.) {\r\n    console.log(\"son numeros pares\");\r\n}\r\nelse if (numero = 9,5,7) {\r\n    console.log(\"son numeros impares\");\r\n}\r\n        }\r\n\r\n        //Muestra un alert() indicando si la edad es mayor o igual que 18 puede conducir\r\n        function puedeConducir(edad) {\r\nconst edad = prompt (\"por favor, ingresa tu edad:\");\r\n        }\r\n        if (edad >=18) {\r\n            alert(\"puedes conducir.\")\r\n        }\r\n        else {\r\n            alert(\"no puedes conducir. debes tener al menos 18 años\");\r\n        }\r\n        }\r\n\r\n        //Muestra un alert() indicando si los numeros comparados son \r\n        function compararNumeros(num1, num2) {\r\nconst num1 = parsefloat(prompt (\"ingresa el primer numero\"));\r\nif( num1 === num2) {\r\n    alert(\"los numeros son iguales\");\r\n}\r\nelse if (num1 > num2) {\r\n    alert(\"el primer numero es mayor que el segundo\");\r\n}\r\nelse (num1 < num2) {\r\n    alert(\"el primer numero es menor que el segundo\");\r\n}\r\n        }\r\n\r\n        //Muestra un alert() indicando la estacion del año para un mes del año dado\r\n        // 1-3 Primavera\r\n        // 4-6 Verano\r\n        // 7-10 - Otoño\r\n        // 10-12 Invierno\r\n        function estacionDelAnio(mes) {\r\nconst mes = parseInt(prompt(\"ingresa el numero del mes (1-12):\"));\r\nif(mes >=1 && <=3) {\r\n    alert(\"primavera\");\r\n}\r\nelse if(mes >=4 && <=6) {\r\n    alert(\"verano\");\r\n}\r\nelse if(mes >=7 && <=9) {\r\n    alert(\"otoño\");\r\n}\r\nelse(mes >=10 && <=12) {\r\n    alert(\"invierno\");\r\n}\r\n        }\r\n\r\n        //Muestra un alert() indicando la conversion de celsius a fahrenheit\r\n        function convertirTemperatura(celsius) {\r\nconst celsius\r\n        }\r\n\r\n        //Muestra un alert() a partir del dia de la semana mostrar el dia seleccionado\r\n        function determinarDiaSemana(numero) {\r\nconst numero = parseInt(prompt(\"ingresa un numero del 1-7 para escoger un dia de la semana\"));\r\nswitch(numero) {\r\n    case 1:\r\n        alert(\"haz escogido lunes.\");\r\n        break;\r\n    case 2:\r\n        alert(\"haz escogido martes.\");\r\n        break;\r\n    case 3:\r\n        alert(\"haz escogido miercoles.\");\r\n        break;\r\n    case 4:\r\n        alert(\"haz escogido jueves.\");\r\n        break;\r\n    case 5:\r\n        alert(\"haz escogido viernes.\");\r\n        break;\r\n    case 6:\r\n        alert(\"haz escogido sabado.\");\r\n        break;\r\n    case 7:\r\n        alert(\"haz escogido domingo.\");\r\n        break;\r\n    default:\r\n        alert(\"numero no valido.\")\r\n}\r\n        }\r\n\r\n        //Muestra un alert() con un numero aleatoria\r\n        function generarNumeroAleatorio() {\r\nconst minimo = 1;\r\nconst maximo = 50;\r\nconst generarNumeroAleatorio = Math.floor(math.random() * (maximo - minimo + +)) + minimo;\r\nalert(\"tu numero aleatorio entre\" + minimo + \"y\" + maximo + \"es:\" + generarNumeroAleatorio);\r\n        }\r\n\r\n        //Muestra un alert() indicando si un numero es positivo o negativo\r\n        function determinarPositivoNegativo(numero) {\r\nfunction determinarpositovNegativo (numero) {\r\n    if (numero > 0) {\r\n        alert (\"Es un numero positivo.\");\r\n    }\r\n    else if (numero < 0) {\r\n        alert (\"Es un numero negativo.\");\r\n    }\r\n    else {\r\n        alert (\"El numero es cero.\");\r\n    }\r\n}\r\n        }\r\n\r\n        //Imprime console.log() la tabla de multiplicar de un numero\r\n        function imprimirTablaMultiplicar(numero) {\r\n            for (let i = i; i <= 10; i++) {\r\n                console.log( $(numero) x (i) = $ (numero * i));\r\n            }\r\n        }\r\n    </script>\r\n</head>\r\n\r\n<body id=\"ejercicio-practico-js\">\r\n    <h1>Ejercicios de JavaScript</h1>\r\n    <button class=\"boton-accionable\" onclick=\"calcularEdad(2000)\">Calcular Edad</button>\r\n    <button class=\"boton-accionable\" onclick=\"verificarNumero(10)\">Verificar Número Par/Impar</button>\r\n    <button class=\"boton-accionable\" onclick=\"puedeConducir(18)\">Verificar Permiso de Conducción</button>\r\n    <button class=\"boton-accionable\" onclick=\"compararNumeros(8, 12)\">Comparar Dos Números</button>\r\n    <button class=\"boton-accionable\" onclick=\"estacionDelAnio(7)\">Determinar Estación del Año</button>\r\n    <button class=\"boton-accionable\" onclick=\"puedeVotar(17)\">Verificar Permiso para Votar</button>\r\n    <button class=\"boton-accionable\" onclick=\"determinarDiaSemana(2)\">Determinar Día de la Semana</button>\r\n    <button class=\"boton-accionable\" onclick=\"generarNumeroAleatorio()\">Generar Número Aleatorio</button>\r\n    <button class=\"boton-accionable\" onclick=\"determinarPositivoNegativo(-10)\">Determinar Positivo o Negativo</button>\r\n    <button class=\"boton-accionable\" onclick=\"convertirTemperatura(25)\">Convertir Temperatura</button>\r\n    <button class=\"boton-accionable\" onclick=\"imprimirTablaMultiplicar(5)\">Imprimir Tabla de Multiplicar</button>\r\n</body>\r\n\r\n</html>"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "**Uso de `prompt()` y `confirm()` en JavaScript**"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "`prompt()`\r\n\r\nLa función `prompt()` se usa para solicitar información del usuario mediante una ventana emergente con un campo de entrada. Se devuelve un valor en formato de cadena (`string`), por lo que, si se requieren números, se deben convertir usando `parseInt()` o `parseFloat()`."
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let nombre = prompt(\"¿Cuál es tu nombre?\");\r\nconsole.log(`Hola, ${nombre}!`);"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "`confirm()`\r\n\r\nLa función `confirm()` muestra una ventana emergente con un mensaje y dos opciones: Aceptar o Cancelar. Devuelve un valor booleano (true si el usuario acepta y false si cancela)."
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let respuesta = confirm(\"¿Quieres continuar?\");\r\nif (respuesta) {\r\n    console.log(\"El usuario aceptó.\");\r\n} else {\r\n    console.log(\"El usuario canceló.\");\r\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "**Ejercicios con Parámetros Usando prompt()**"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "Ahora genera los mimos  mismos ejercicios anterior pero ahora solicitando los valores a través de `prompt()` en vez de pasarlo por parametros. Esto permitirá a los usuarios ingresar los datos dinámicamente antes de ejecutar las funciones."
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function solicitarEdad() {\r\n    let anioNacimiento = prompt(\"Ingrese su año de nacimiento:\");\r\n    let anioActual = new Date().getFullYear();\r\n    let edad = anioActual - anioNacimiento;\r\n    alert(`Tienes ${edad} años.`);\r\n}\r\n\r\nfunction solicitarNumeroParImpar() {\r\n    let numero = prompt(\"Ingrese un número:\");\r\n    alert(numero % 2 === 0 ? \"El número es par.\" : \"El número es impar.\");\r\n}"
+            ],
+            "outputs": []
+        }
+    ]
+}
