@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #gameArea {
+background-image: url(https://previews.123rf.com/images/rokvel/rokvel1701/rokvel170100002/69267335-modelo-en-blanco-para-la-competici%C3%B3n-deporte-de-tiro-al-blanco-objetivo-clean-con-los-n%C3%BAmeros-de.jpg);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+background-color: ;
+width: 300px;
+height: 300px;
+border: 4px solid #333;
+position: relative;
+overflow: hidden;
+max-width: 300px
+        }
+
+        .clickTarget {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        #timer {
+            margin-top: 5px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Haz clic en los círculos rojos</h1>
+    <input type="number" id="timeout" min="1" max="75" value="45" />
+    <button id="setGameTimeout">Fijar temporizador</button>
+    <hr />
+    <div id="gameArea"></div>
+    <p>Puntuación: <span id="score">0</span></p>
+    <p id="timer">Tiempo restante: <span id="timeLeft">45</span></p>
+    <button id="startGame">Iniciar temporizador</button>
+    <p id="message"></p>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const gameArea = document.getElementById("gameArea");
+            const timeLeftDisplay = document.getElementById("timeLeft");
+            const scoreDisplay = document.getElementById("score");
+            const messageDisplay = document.getElementById("message");
+            const setGameTimeout = document.getElementById("setGameTimeout");
+            const timerInput = document.getElementById("timeout");
+            const startGame = document.getElementById("startGame");
+
+            let score = 0;
+            let timeLeft = 45;
+            let refreshInterval = null;
+
+            setGameTimeout.addEventListener("click", configurarTimeout);
+
+            startGame.addEventListener("click", function () {
+                if (refreshInterval !== null) {
+                    clearInterval(refreshInterval); // Detiene cualquier intervalo previo
+                }
+                score = 0;
+                timeLeft = parseInt(timerInput.value) || 45;
+                scoreDisplay.textContent = score;
+                timeLeftDisplay.textContent = timeLeft;
+                timerInput.disabled = true;
+                setGameTimeout.disabled = true;
+                startGame.disabled = true;
+                messageDisplay.textContent = "";
+                gameArea.innerHTML = ""; // Limpia los objetivos previos
+                createTarget(); // Crea el primer círculo rojo
+                refreshInterval = setInterval(updateTimer, 1000);
+            });
+
+            function createTarget() {
+                const target = document.createElement("div");
+                target.classList.add("clickTarget");
+                moveTarget(target);
+                target.addEventListener("click", function () {
+                    if (refreshInterval != null) {
+                        score++;
+                        scoreDisplay.textContent = score;
+                        moveTarget(target);
+
+                        if (score === 15) {
+                            createTarget();
+                        }
+                    }
+                });
+                gameArea.appendChild(target);
+            }
+
+            function moveTarget(target) {
+                const maxX = gameArea.clientWidth - target.clientWidth;
+                const maxY = gameArea.clientHeight - target.clientHeight;
+                const randomX = Math.random() * maxX;
+                const randomY = Math.random() * maxY;
+
+                target.style.left = randomX + "px";
+                target.style.top = randomY + "px";
+            }
+
+            function updateTimer() {
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    timeLeftDisplay.textContent = timeLeft;
+                } else {
+                    if (refreshInterval != null) {
+                        clearInterval(refreshInterval);
+                        refreshInterval = null;
+                    }
+                    timerInput.disabled = false;
+                    setGameTimeout.disabled = false;
+                    startGame.disabled = false;
+                    messageDisplay.textContent = `¡Tiempo agotado! Tu puntuación final es: ${score}`;
+                    alert(`¡Tiempo agotado! Tu puntuación final es: ${score}`);
+                }
+            }
+
+            function configurarTimeout() {
+                let timeout = parseInt(timerInput.value);
+                if (timeout && timeout >= 1 && timeout <= 75) {
+                    timeLeft = timeout;
+                    timeLeftDisplay.textContent = timeout;
+                } else {
+                    alert("Ingrese un valor numérico entre 1 y 75.");
+                    timerInput.value = 45; // Restablece el valor predeterminado
+                }
+            }
+        });
+    </script>
+</body>
+</html>
